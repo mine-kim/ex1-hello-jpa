@@ -6,6 +6,7 @@ site: [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/OR
 ## 개발 환경
 - Java 17
 - Springboot 3.3.0
+- h2 2.2.224
 
 ## 커리큘럼
 1. 강좌 소개 (O)
