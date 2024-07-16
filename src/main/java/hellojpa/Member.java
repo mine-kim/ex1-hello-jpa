@@ -9,10 +9,23 @@ initialValue = 1, allocationSize = 50)
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-    generator = "MEMBER_SEQ_GENERATOR")
+    @GeneratedValue
+    @Column(name = "MEMBER_ID")
     private Long id;
-    private String name;
+    @Column(name = "USERNAME")
+    private String username;
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+      //  team.getMembers().add(this);
+    }
 
     public Long getId() {
         return id;
@@ -22,11 +35,11 @@ public class Member {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

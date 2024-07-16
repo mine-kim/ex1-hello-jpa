@@ -5,6 +5,7 @@
     <persistence-unit name="hello">
         <!-- Gradle 설정에서 인식이 안되는 이슈 -->
         <class>hellojpa.Member</class>
+        <class>hellojpa.Team</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
